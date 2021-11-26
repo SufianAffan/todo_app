@@ -25,8 +25,6 @@ class SqliteApi
     return await openDatabase(path, version: 2, onCreate: _onCreate);
   }
 
-
-
   FutureOr<void> _onCreate(Database db, int version) async
   {
     await db.execute(
@@ -48,5 +46,4 @@ class SqliteApi
       '''
     );
   }
-
 }
